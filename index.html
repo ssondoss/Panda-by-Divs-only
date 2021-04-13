@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .ear {
+        background-color: black;
+        height: 70px;
+        right: 50%;
+        width: 70px;
+        margin-top: 0 !important;
+        border-radius: 50% !important;
+      }
+      .scd {
+        margin-left: 60px;
+        animation: right 3s ease-in;
+      }
+
+      .ear-fst {
+        animation: left1 3s ease-in;
+      }
+      .face {
+        height: 180px;
+        width: 200px;
+        z-index: 99;
+        top: 4.6%;
+
+        background-color: #fff;
+        position: absolute;
+        border: 3px solid #000;
+        border-radius: 50%;
+      }
+      .eyes {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: #000;
+
+        position: absolute;
+      }
+      .eye-scd {
+        animation: right 3s ease-in;
+
+        top: 20%;
+        right: 10%;
+      }
+      .eye-fst {
+        top: 20%;
+        animation: left1 3s ease-in;
+
+        left: 10%;
+      }
+      .pupilLarge {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 25px;
+        margin-top: 10px;
+      }
+      .pupilSmall {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        margin-left: 20px;
+        margin-top: auto;
+      }
+      .nose {
+        background-color: #000;
+        height: 10px;
+        width: 20px;
+        border-radius: 50%;
+        position: absolute;
+        animation: left1 3s ease-in;
+
+        top: 63%;
+        left: 46.5%;
+      }
+      .mouth1 {
+        position: absolute;
+        width: 18px;
+        height: 10px;
+        background-color: transparent;
+        border-bottom: 3px solid #000;
+
+        border-bottom-left-radius: 90%;
+        top: 70%;
+        left: 51%;
+        animation: left1 3s ease-in;
+
+        border-bottom-right-radius: 90%;
+      }
+      .mouth2 {
+        position: absolute;
+        width: 18px;
+        height: 10px;
+        background-color: transparent;
+        border-bottom: 3px solid #000;
+
+        border-bottom-left-radius: 90%;
+        top: 70%;
+        left: 42.5%;
+        animation: right 3s ease-in;
+
+        border-bottom-right-radius: 90%;
+      }
+      .halfHeart1 {
+        background-color: red;
+        border-top-left-radius: 70%;
+        border-top-right-radius: 70%;
+        height: 40px;
+        width: 20px;
+        animation: right 3s ease-in;
+
+        transform: rotate(-45deg);
+      }
+      .halfHeart2 {
+        background-color: red;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        height: 40px;
+        margin-left: -5px;
+        animation: left1 3s ease-in;
+        width: 20px;
+        transform: rotate(45deg);
+      }
+      .lineOfMouth {
+        height: 10px;
+        width: 2px;
+        background-color: #000;
+        top: 68%;
+        position: absolute;
+        left: 51%;
+      }
+      @keyframes left1 {
+        0% {
+          transform: translateX(300px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: translateX(-300px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 d-flex">
+      <div class="mx-auto">
+        <div class="row mx-0" style="position: relative">
+          <div class="ear ear-fst"></div>
+          <div class="ear scd"></div>
+        </div>
+        <div class="face">
+          <div class="eyes eye-fst">
+            <div class="pupilLarge"></div>
+            <div class="pupilSmall"></div>
+          </div>
+          <div class="eye-scd eyes">
+            <div class="pupilLarge"></div>
+            <div class="pupilSmall"></div>
+          </div>
+          <div class="text-center mt-auto"><div class="nose"></div></div>
+          <div class="">
+            <div class="lineOfMouth" style=""></div>
+          </div>
+          <div class="mouth1"></div>
+          <div class="mouth2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5"></div>
+    <div class="row mt-5 mx-0 text-center justify-content-center">
+      <div class="halfHeart1 px-0"></div>
+      <div class="halfHeart2 px-0"></div>
+    </div>
+    <div class="row mt-5 mx-0 text-center justify-content-center">
+      <div class="halfHeart1 px-0"></div>
+      <div class="halfHeart2 px-0"></div>
+    </div>
+    <div class="row mt-5 mx-0 text-center justify-content-center">
+      <div class="halfHeart1 px-0"></div>
+      <div class="halfHeart2 px-0"></div>
+    </div>
+  </body>
+</html>
